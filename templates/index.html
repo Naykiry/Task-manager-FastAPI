@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tasks — FastAPI Simple</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1 class="title">Список задач</h1>
+        <p class="subtitle">Простое приложение на FastAPI с фронтендом</p>
+      </header>
+
+      <section class="controls">
+        <form id="taskForm" class="task-form" autocomplete="off">
+          <input id="name" name="name" class="input" placeholder="Название задачи" required />
+          <input id="description" name="description" class="input" placeholder="Описание (необязательно)" />
+          <button type="submit" id="addBtn" class="btn">Добавить</button>
+          <button type="button" id="refresh" class="btn ghost">Обновить</button>
+        </form>
+      </section>
+
+      <section id="tasks" class="tasks">
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <div class="loading-text">Загрузка...</div>
+        </div>
+      </section>
+
+      <div id="toast" class="toast" aria-live="polite"></div>
+
+      <footer class="footer">Made with ❤ — FastAPI</footer>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
